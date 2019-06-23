@@ -1,0 +1,135 @@
+/* You can add global styles to this file, and also import other style files */
+// variables
+// colors
+$primary-color: #d83c40;
+$secondary-color: #6757f5;
+$blue-color: #2975ff;
+$green-color: #32ab41;
+$light-green-color: #d6f2db;
+$orange-color: #eeb71c;
+$light-orange-color: #fff4d6;
+$light-red-color: #ffe9eb;
+$purple-color: #6657f2;
+$light-purple-color: #e5e2ff;
+$grey-color: #757575;
+$light-grey: #f1f1f1;
+$dim-grey: #f7f7f7;
+$dark: #000;
+$white: #fff;
+
+// font
+$font-family: 'Poppins', sans-serif;
+
+// Mixin
+@mixin transition($property) {
+    -webkit-transition: $property; 
+    -moz-transition: $property; 
+    -ms-transition: $property; 
+    -o-transition: $property; 
+    transition: $property;
+}
+%flex{
+    display: -webkit-box; 
+    display: -moz-box; 
+    display: -ms-flexbox; 
+    display: -webkit-flex; 
+    display: flex;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body, .wrapper{ /*height: 100%;*/ font-family: $font-family;}
+
+p{ 
+    font-size: 13px; 
+    line-height: 16px; 
+}
+
+.btn{ 
+    padding: 12px 22px; 
+    background-color: #2975ff;
+    border: 1px solid #2975ff; 
+    -moz-border-radius: 6px; 
+    -webkit-border-radius: 6px; 
+    border-radius: 6px; 
+    color: $white; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-size: 12px; 
+    display: inline-block; 
+    @extend %flex;
+    @include transition(all .25s ease);
+    &.border-btn{ 
+        background-color: transparent; 
+        color: #2975ff; 
+    }
+    &:hover{
+        background-color: $primary-color; 
+        border-color: $primary-color; 
+        color: $white;
+    }
+}
+
+// color-box
+.green-box{ 
+    background-color: $light-green-color; 
+    border-top: 2px solid $green-color;
+    text-transform: uppercase;
+    h5{ 
+        color: $green-color; 
+        font-size: 14px; 
+        line-height: 1;
+    }
+}
+
+.orange-box{ 
+    background-color: $light-orange-color; 
+    border-top: 2px solid $orange-color; 
+    text-transform: uppercase;
+    h5{ 
+      color: $orange-color; 
+      font-size: 14px; 
+      line-height: 1;
+    }
+}
+
+.red-box{ 
+    background-color: $light-red-color; 
+    border-top: 2px solid $primary-color;
+    text-transform: uppercase;
+    h5{  
+      color: $primary-color; 
+      font-size: 14px; 
+      line-height: 1;
+    }
+}
+
+.purple-box{ 
+    background-color: $light-purple-color; 
+    border-top: 2px solid $purple-color; 
+    text-transform: uppercase;
+    h5{
+      color: $purple-color; 
+      font-size: 14px; 
+      line-height: 1;
+    }
+}
+
+.grey-box{ 
+    background-color: $light-grey; 
+    border-top: 2px solid $grey-color; 
+    text-transform: uppercase;
+}
+.green-text{ color: $green-color; }
+.orange-text{ color: $orange-color; }
+.red-text{ color: $primary-color; }
+.purple-text{ color: $purple-color; }
+.grey-text{ color: $grey-color; }
+.purple-block{ background-color: $purple-color; color: $white; }
